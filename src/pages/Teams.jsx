@@ -9,7 +9,7 @@ import './Teams.css';
 const Teams = () => {
     const [activeTab, setActiveTab] = useState('grid'); // 'grid' | 'compare'
     return (
-        <div className="container" style={{ paddingBottom: '60px' }}>
+        <div style={{ paddingBottom: '60px', width: '100%' }}>
             <header style={{ textAlign: 'center', marginBottom: '60px', marginTop: '40px' }}>
                 <motion.h1
                     initial={{ opacity: 0, y: -20 }}

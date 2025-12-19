@@ -60,7 +60,7 @@
         /* Reduce top gap on mobile */
         padding-bottom: 140px;
         /* Add bottom gap for fixed mobile navbar */
-        padding-left: 1rem;
-        padding-right: 1rem;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
     }
 }
