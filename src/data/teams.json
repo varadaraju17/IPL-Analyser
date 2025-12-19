@@ -1,0 +1,156 @@
+[
+    {
+        "id": "csk",
+        "name": "Chennai Super Kings",
+        "shortName": "CSK",
+        "primaryColor": "#F9CD05",
+        "secondaryColor": "#005CAB",
+        "homeGround": "M. A. Chidambaram Stadium",
+        "owner": "Chennai Super Kings Cricket Limited",
+        "coach": "Stephen Fleming",
+        "titles": [
+            2010,
+            2011,
+            2018,
+            2021,
+            2023
+        ],
+        "captain": "MS Dhoni",
+        "logo": "https://unavatar.io/twitter/ChennaiIPL"
+    },
+    {
+        "id": "mi",
+        "name": "Mumbai Indians",
+        "shortName": "MI",
+        "primaryColor": "#004BA0",
+        "secondaryColor": "#D1AB3E",
+        "homeGround": "Wankhede Stadium",
+        "owner": "Indiawin Sports Pvt. Ltd",
+        "coach": "Mahela Jayawardene",
+        "titles": [
+            2013,
+            2015,
+            2017,
+            2019,
+            2020
+        ],
+        "captain": "Hardik Pandya",
+        "logo": "https://unavatar.io/twitter/mipaltan"
+    },
+    {
+        "id": "rcb",
+        "name": "Royal Challengers Bengaluru",
+        "shortName": "RCB",
+        "primaryColor": "#EC1C24",
+        "secondaryColor": "#2B2A29",
+        "homeGround": "M. Chinnaswamy Stadium",
+        "owner": "Royal Challengers Sports Private Ltd",
+        "coach": "Andy Flower",
+        "titles": [
+            2025
+        ],
+        "captain": "Rajat Patidar",
+        "logo": "https://unavatar.io/twitter/RCBTweets"
+    },
+    {
+        "id": "kkr",
+        "name": "Kolkata Knight Riders",
+        "shortName": "KKR",
+        "primaryColor": "#3A225D",
+        "secondaryColor": "#B3A123",
+        "homeGround": "Eden Gardens",
+        "owner": "Knight Riders Sports Private Limited",
+        "coach": "Abhishek Nayar",
+        "titles": [
+            2012,
+            2014,
+            2024
+        ],
+        "captain": "Ajinkya Rahane",
+        "logo": "https://unavatar.io/twitter/KKRiders"
+    },
+    {
+        "id": "srh",
+        "name": "Sunrisers Hyderabad",
+        "shortName": "SRH",
+        "primaryColor": "#F7A721",
+        "secondaryColor": "#000000",
+        "homeGround": "Rajiv Gandhi Intl. Cricket Stadium",
+        "owner": "Sun TV Network Limited",
+        "coach": "Daniel Vettori",
+        "titles": [
+            2016
+        ],
+        "captain": "Pat Cummins",
+        "logo": "https://unavatar.io/twitter/SunRisers"
+    },
+    {
+        "id": "rr",
+        "name": "Rajasthan Royals",
+        "shortName": "RR",
+        "primaryColor": "#EA1A85",
+        "secondaryColor": "#254AA5",
+        "homeGround": "Sawai Mansingh Stadium",
+        "owner": "Royal Multisport Private Limited",
+        "coach": "Kumar Sangakkara",
+        "titles": [
+            2008
+        ],
+        "captain": "Ravindra Jadeja",
+        "logo": "https://unavatar.io/twitter/rajasthanroyals"
+    },
+    {
+        "id": "dc",
+        "name": "Delhi Capitals",
+        "shortName": "DC",
+        "primaryColor": "#00008B",
+        "secondaryColor": "#EF1B23",
+        "homeGround": "Arun Jaitley Stadium",
+        "owner": "JSW GMR Cricket Pvt Ltd",
+        "coach": "Hemang Badani",
+        "titles": [],
+        "captain": "Axar Patel",
+        "logo": "https://unavatar.io/twitter/DelhiCapitals"
+    },
+    {
+        "id": "pbks",
+        "name": "Punjab Kings",
+        "shortName": "PBKS",
+        "primaryColor": "#DD1F2D",
+        "secondaryColor": "#D7D7D7",
+        "homeGround": "PCA New Stadium, Mullanpur",
+        "owner": "K.P.H. Dream Cricket Private Limited",
+        "coach": "Ricky Ponting",
+        "titles": [],
+        "captain": "Shreyas Iyer",
+        "logo": "https://unavatar.io/twitter/PunjabKingsIPL"
+    },
+    {
+        "id": "lsg",
+        "name": "Lucknow Super Giants",
+        "shortName": "LSG",
+        "primaryColor": "#0057E0",
+        "secondaryColor": "#00FF00",
+        "homeGround": "BRSABV Ekana Cricket Stadium",
+        "owner": "RPSG Sports Private Limited",
+        "coach": "Justin Langer",
+        "titles": [],
+        "captain": "Rishabh Pant",
+        "logo": "https://unavatar.io/twitter/LucknowIPL"
+    },
+    {
+        "id": "gt",
+        "name": "Gujarat Titans",
+        "shortName": "GT",
+        "primaryColor": "#1B2133",
+        "secondaryColor": "#B3905D",
+        "homeGround": "Narendra Modi Stadium",
+        "owner": "Irelia Sports India Private Limited",
+        "coach": "Ashish Nehra",
+        "titles": [
+            2022
+        ],
+        "captain": "Shubman Gill",
+        "logo": "https://unavatar.io/twitter/gujarat_titans"
+    }
+]

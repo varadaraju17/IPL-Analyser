@@ -1,0 +1,467 @@
+/* PlayingXIBuilder.css - Premium Tactical Command Center Theme */
+
+:root {
+    --p-dark: #050a14;
+    --p-card-bg: linear-gradient(145deg, #1a2035 0%, #121625 100%);
+    --p-accent: #00f0ff;
+    /* Electric Cyan */
+    --p-gold: #ffd700;
+    --p-border: rgba(255, 255, 255, 0.1);
+    --p-glow: 0 0 10px rgba(0, 240, 255, 0.15);
+}
+
+.builder-layout {
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    gap: 30px;
+    margin-top: 30px;
+    height: 800px;
+    font-family: 'Rajdhani', sans-serif;
+    color: #fff;
+    overflow: hidden;
+}
+
+/* --- PANELS --- */
+.builder-panel {
+    background: rgba(15, 20, 35, 0.95);
+    border: 1px solid var(--p-border);
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+    position: relative;
+}
+
+/* Decorative 'Tech' corners */
+.builder-panel::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--p-accent), transparent);
+    opacity: 0.5;
+}
+
+/* --- HEADER SECTION --- */
+.panel-header {
+    padding: 20px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.03), transparent);
+    border-bottom: 1px solid var(--p-border);
+}
+
+.panel-header h3 {
+    font-family: 'Teko', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #fff;
+    margin: 0 0 15px 0;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.search-input-premium {
+    width: 100%;
+    padding: 12px 15px;
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    color: #fff;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.search-input-premium:focus {
+    outline: none;
+    border-color: var(--p-accent);
+    box-shadow: 0 0 15px rgba(0, 240, 255, 0.1);
+    background: rgba(0, 0, 0, 0.5);
+}
+
+
+/* --- SQUAD LIST (LEFT) --- */
+.scroll-area {
+    flex: 1;
+    overflow-y: auto;
+    padding: 15px;
+    background: radial-gradient(circle at top right, rgba(255, 255, 255, 0.02), transparent 40%);
+}
+
+.scroll-area::-webkit-scrollbar {
+    width: 4px;
+}
+
+.scroll-area::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+}
+
+.squad-list-drop {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-height: 200px;
+}
+
+.draggable-wrapper {
+    touch-action: none;
+}
+
+
+/* --- MINI PLAYER CARD --- */
+.mini-player-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 14px;
+    background: var(--p-card-bg);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-left: 0;
+    /* Handled by pseudo element */
+    border-radius: 0 8px 8px 0;
+    cursor: grab;
+    user-select: none;
+    touch-action: none;
+    position: relative;
+    transition: all 0.2s ease;
+}
+
+/* Accent Bar on Left */
+.mini-player-card::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    border-radius: 4px 0 0 4px;
+}
+
+.mini-player-card.ind::before {
+    background: linear-gradient(180deg, #ff9933, #ffffff, #138808);
+}
+
+.mini-player-card.os::before {
+    background: linear-gradient(180deg, #33ccff, #0055ff);
+}
+
+/* Aviation Blue for Overseas */
+
+
+.mini-player-card:hover {
+    transform: translateX(5px);
+    background: linear-gradient(145deg, #1e253e 0%, #151a2d 100%);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.mini-card-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Avatar Hexagon */
+.mini-avatar-frame {
+    width: 40px;
+    height: 40px;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.mini-avatar-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.1);
+}
+
+.mini-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.mini-name {
+    font-family: 'Teko', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1;
+    text-transform: uppercase;
+    color: #fff;
+    letter-spacing: 0.5px;
+}
+
+.mini-role {
+    font-size: 0.75rem;
+    color: #8899ac;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+.mini-card-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 2px;
+}
+
+.mini-price {
+    font-family: 'Teko', sans-serif;
+    font-size: 1rem;
+    color: var(--p-gold);
+}
+
+.drag-handle {
+    color: rgba(255, 255, 255, 0.2);
+    transition: color 0.2s;
+}
+
+.mini-player-card:hover .drag-handle {
+    color: #fff;
+}
+
+.mini-os-tag {
+    position: absolute;
+    right: 6px;
+    top: 6px;
+    font-size: 0.6rem;
+    opacity: 0.8;
+}
+
+
+/* --- OVERLAY (Dragging) --- */
+.overlay-card {
+    background: #252b42 !important;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.8);
+    border: 1px solid var(--p-accent);
+    transform: scale(1.05);
+    z-index: 99999;
+}
+
+
+/* --- XI PANEL (RIGHT) --- */
+.xi-panel {
+    background:
+        linear-gradient(rgba(15, 20, 35, 0.95), rgba(15, 20, 35, 0.95)),
+        url('https://www.transparenttextures.com/patterns/carbon-fibre.png');
+    /* Subtle texture if available, else fallback to gradient */
+}
+
+/* Status Bar */
+.xi-status-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 25px;
+    background: rgba(0, 0, 0, 0.3);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.xi-count .lbl {
+    font-size: 0.75rem;
+    color: #6e7a9e;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.xi-count .val {
+    font-family: 'Teko', sans-serif;
+    fontSize: 2.2rem;
+    line-height: 0.9;
+    color: #fff;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+.xi-rule {
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 700;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid transparent;
+}
+
+.xi-rule.ok {
+    background: rgba(0, 255, 128, 0.1);
+    color: #00ff80;
+    border-color: rgba(0, 255, 128, 0.2);
+}
+
+.xi-rule.err {
+    background: rgba(255, 50, 50, 0.1);
+    color: #ff3333;
+    border-color: rgba(255, 50, 50, 0.2);
+}
+
+
+/* PITCH AREA */
+.xi-slots-container {
+    flex: 1;
+    overflow-y: auto;
+    padding: 25px;
+    background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+    background-size: 40px 40px;
+    /* Grid effect */
+}
+
+.xi-drop-zone {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding-bottom: 30px;
+}
+
+
+/* --- SLOTS --- */
+.xi-slot-filled,
+.xi-slot-empty {
+    display: grid;
+    grid-template-columns: 50px 100px 1fr;
+    align-items: center;
+    padding: 5px 15px 5px 0;
+    /* Left padding 0, layout handles it */
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    transition: all 0.2s ease;
+}
+
+.xi-slot-filled:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.xi-slot-number {
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 50% 50% 0;
+    /* Semi-circle */
+    background: rgba(255, 255, 255, 0.05);
+    font-family: 'Teko', sans-serif;
+    font-size: 1.4rem;
+    color: rgba(255, 255, 255, 0.5);
+    margin-right: 15px;
+}
+
+.xi-slot-filled .xi-slot-number {
+    background: var(--p-accent);
+    color: #000;
+    box-shadow: 0 0 10px rgba(0, 240, 255, 0.4);
+}
+
+.xi-slot-role {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    color: var(--p-accent);
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+/* Slot Content (Mini Card override inside Slot) */
+.xi-player-content {
+    width: 100%;
+}
+
+.xi-player-content .mini-player-card {
+    background: transparent;
+    border: none;
+    padding: 5px 0;
+}
+
+.xi-player-content .mini-player-card::before {
+    display: none;
+}
+
+/* Remove side bar in list */
+.xi-player-content .mini-player-card:hover {
+    transform: none;
+    box-shadow: none;
+}
+
+
+/* Empty State */
+.xi-slot-empty {
+    border: 1px dashed rgba(255, 255, 255, 0.1);
+    opacity: 0.6;
+}
+
+.xi-empty-dashed {
+    color: rgba(255, 255, 255, 0.2);
+    font-style: italic;
+    font-size: 0.9rem;
+}
+
+
+/* --- IMPACT PLAYER --- */
+.impact-box-container {
+    padding: 20px;
+    background: linear-gradient(0deg, rgba(255, 0, 255, 0.05), transparent);
+    border-top: 1px solid rgba(255, 0, 255, 0.2);
+}
+
+.impact-drop-area {
+    border: 1px dashed #ff00ff;
+    padding: 15px;
+    border-radius: 12px;
+    background: rgba(20, 10, 30, 0.6);
+    min-height: 80px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: inset 0 0 20px rgba(255, 0, 255, 0.05);
+}
+
+.impact-label {
+    position: absolute;
+    top: -12px;
+    left: 20px;
+    background: #0f1225;
+    padding: 2px 10px;
+    color: #ff00ff;
+    border: 1px solid #ff00ff;
+    font-family: 'Teko', sans-serif;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+    box-shadow: 0 0 10px rgba(255, 0, 255, 0.3);
+    border-radius: 4px;
+}
+
+.impact-placeholder-text {
+    font-family: 'Teko', sans-serif;
+    font-size: 1.5rem;
+    color: rgba(255, 0, 255, 0.3);
+    text-transform: uppercase;
+}
+
+
+/* --- BREAKPOINTS --- */
+@media (max-width: 900px) {
+    .builder-layout {
+        grid-template-columns: 1fr;
+        height: auto;
+        overflow: visible;
+    }
+
+    .builder-panel {
+        height: 600px;
+    }
+}

@@ -1,0 +1,233 @@
+.global-lineup-container {
+    padding: 20px 0;
+    width: 100%;
+    overflow: hidden;
+}
+
+.section-title {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 20px;
+    text-align: center;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px rgba(0, 240, 255, 0.3);
+}
+
+.horizontal-scroll-track {
+    display: flex;
+    gap: 30px;
+    overflow-x: auto;
+    padding: 20px 40px;
+    scroll-behavior: smooth;
+    /* Hide Scrollbar but allow scroll */
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.horizontal-scroll-track::-webkit-scrollbar {
+    display: none;
+}
+
+/* CARD STYLES */
+.team-lineup-card {
+    min-width: 320px;
+    width: 320px;
+    background: rgba(15, 20, 35, 0.85);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 3px solid var(--team-color);
+    border-radius: 16px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.team-lineup-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+/* HEADER */
+.tl-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(0, 0, 0, 0));
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.tl-logo-area {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tl-logo-area img {
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
+}
+
+.tl-placeholder {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--team-color);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.8rem;
+}
+
+.tl-info h3 {
+    margin: 0;
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    color: #fff;
+    line-height: 1;
+}
+
+.tl-count {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.5);
+    display: flex;
+    align-items: center;
+    margin-top: 4px;
+}
+
+
+/* LIST AREA */
+.tl-list-area {
+    flex: 1;
+    min-height: 380px;
+    /* Fixed height for consistency */
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    overflow-y: auto;
+}
+
+.tl-list-area::-webkit-scrollbar {
+    width: 4px;
+}
+
+.tl-list-area::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.tl-player-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 10px;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.tl-num {
+    font-family: var(--font-heading);
+    color: rgba(255, 255, 255, 0.3);
+    font-size: 1rem;
+    width: 20px;
+}
+
+.tl-p-name {
+    flex: 1;
+    font-weight: 600;
+    color: #fff;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.tl-p-role {
+    font-size: 0.65rem;
+    color: rgba(255, 255, 255, 0.4);
+    text-transform: uppercase;
+}
+
+.tl-empty-state {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.2);
+    font-style: italic;
+}
+
+
+/* IMPACT AREA */
+.tl-impact-area {
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.3);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.imp-lbl {
+    font-size: 0.65rem;
+    color: #ff00ff;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.tl-imp-player {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.imp-av {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid #ff00ff;
+}
+
+.imp-none {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.3);
+    font-style: italic;
+}
+
+
+/* BUTTON */
+.tl-edit-btn {
+    display: block;
+    text-align: center;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--team-color);
+    text-decoration: none;
+    font-family: var(--font-heading);
+    letter-spacing: 1px;
+    font-size: 1.1rem;
+    transition: all 0.2s;
+}
+
+.tl-edit-btn:hover {
+    background: var(--team-color);
+    color: #000;
+}

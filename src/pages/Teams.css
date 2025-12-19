@@ -1,0 +1,36 @@
+/* Teams.css used inline styles before, creating proper CSS now if needed or updating index.css */
+/* Actually, we can just inject these styles into index.css or create a new file. Let's create Teams.css */
+
+.teams-tabs-nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.teams-tabs-nav .tab-btn {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.6);
+    padding: 12px 30px;
+    font-family: 'Teko', sans-serif;
+    font-size: 1.4rem;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.teams-tabs-nav .tab-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.teams-tabs-nav .tab-btn.active {
+    background: linear-gradient(135deg, rgba(0, 255, 255, 0.2), rgba(0, 150, 255, 0.2));
+    color: #00ffff;
+    border: 1px solid #00ffff;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+}

@@ -1,0 +1,66 @@
+.app-layout {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+/* MAIN CONTENT CONTAINER */
+.content-container {
+    padding-top: 120px;
+    /* Default Desktop top spacing for fixed navbar */
+    padding-bottom: 2rem;
+    min-height: 100vh;
+    width: 100%;
+    max-width: 1400px;
+    /* Constraint for large screens */
+    margin: 0 auto;
+    /* Center the content */
+    padding-left: 2rem;
+    padding-right: 2rem;
+    position: relative;
+    z-index: 10;
+}
+
+/* BACKGROUND MESH */
+.bg-gradient-mesh {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: radial-gradient(circle at 10% 10%, rgba(0, 243, 255, 0.05) 0%, transparent 40%),
+        radial-gradient(circle at 90% 90%, rgba(188, 19, 254, 0.05) 0%, transparent 40%),
+        radial-gradient(circle at 50% 50%, rgba(5, 5, 5, 1) 100%, transparent 0%);
+    background-size: 200% 200%;
+    animation: gradient-shift 20s ease infinite;
+}
+
+@keyframes gradient-shift {
+    0% {
+        background-position: 0% 0%;
+    }
+
+    50% {
+        background-position: 100% 100%;
+    }
+
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+/* RESPONSIVE BREAKPOINTS */
+@media (max-width: 768px) {
+    .content-container {
+        padding-top: 2rem;
+        /* Reduce top gap on mobile */
+        padding-bottom: 140px;
+        /* Add bottom gap for fixed mobile navbar */
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}

@@ -1,0 +1,256 @@
+/* CompareTeamsLineups.css - Premium VS Theme */
+
+.compare-teams-lineups {
+    background: rgba(5, 8, 20, 0.6);
+    padding: 30px;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    max-width: 1200px;
+    margin: 0 auto;
+    color: #fff;
+    min-height: 600px;
+}
+
+.compare-teams-lineups h3 {
+    text-align: center;
+    font-family: 'Teko', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    background: linear-gradient(to right, #00ffff, #0099ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Selectors Area */
+.team-selectors,
+.lineup-selectors {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 25px;
+}
+
+.team-selectors div,
+.lineup-selectors div {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 250px;
+}
+
+.team-selectors label,
+.lineup-selectors label {
+    font-family: 'Rajdhani', sans-serif;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+}
+
+.team-selectors select,
+.lineup-selectors select {
+    background: rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #fff;
+    padding: 12px;
+    border-radius: 8px;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+    outline: none;
+    transition: 0.3s;
+}
+
+.team-selectors select:focus,
+.lineup-selectors select:focus {
+    border-color: #00ffff;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
+}
+
+/* Comparison View */
+.compare-view {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    position: relative;
+    gap: 20px;
+}
+
+.compare-column {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 20px;
+    position: relative;
+}
+
+.versus-team-title {
+    font-family: 'Teko', sans-serif;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    padding-bottom: 10px;
+}
+
+.lineup-tag {
+    font-size: 1rem;
+    color: #888;
+    margin-left: 10px;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 2px 8px;
+    border-radius: 4px;
+    vertical-align: middle;
+}
+
+/* VS Divider */
+.vs-divider {
+    position: absolute;
+    left: 50%;
+    top: 50px;
+    transform: translateX(-50%);
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+}
+
+.vs-circle {
+    width: 60px;
+    height: 60px;
+    background: #000;
+    border: 2px solid #00ffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Teko', sans-serif;
+    font-size: 1.5rem;
+    color: #00ffff;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.4);
+    font-weight: bold;
+}
+
+/* Rows */
+.compare-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.compare-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 8px;
+    transition: 0.2s;
+}
+
+.compare-row:hover {
+    background: rgba(255, 255, 255, 0.06);
+    transform: translateX(2px);
+}
+
+.idx {
+    font-family: 'Teko', sans-serif;
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.4);
+    width: 20px;
+    text-align: right;
+}
+
+.mini-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.p-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.p-name {
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    color: #fff;
+    line-height: 1.2;
+}
+
+.p-role {
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* Impact Row Special */
+.impact-row {
+    margin-top: 15px;
+    border: 1px dashed rgba(255, 0, 255, 0.4);
+    background: rgba(255, 0, 255, 0.05);
+}
+
+.impact-row .idx {
+    color: #ff00ff;
+}
+
+.impact-row .p-role {
+    color: #ff00ff;
+}
+
+.no-impact {
+    color: rgba(255, 255, 255, 0.3);
+    font-style: italic;
+    font-size: 0.9rem;
+    margin-left: 10px;
+}
+
+/* Animations */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.animated-entry {
+    animation: slideIn 0.3s ease forwards;
+    opacity: 0;
+}
+
+/* Empty State */
+.empty-state {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.5);
+    font-family: 'Rajdhani', sans-serif;
+}
+
+@media (max-width: 768px) {
+    .compare-view {
+        flex-direction: column;
+    }
+
+    .vs-divider {
+        position: relative;
+        top: 0;
+        margin: 20px 0;
+    }
+
+    .team-selectors,
+    .lineup-selectors {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+}
