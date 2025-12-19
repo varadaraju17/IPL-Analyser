@@ -454,14 +454,173 @@
 
 
 /* --- BREAKPOINTS --- */
+/* --- MOBILE COMPACT MODE --- */
 @media (max-width: 900px) {
     .builder-layout {
-        grid-template-columns: 1fr;
+        grid-template-columns: 80px 1fr;
+        /* Reduced left column width */
+        gap: 5px;
         height: auto;
-        overflow: visible;
+        min-height: 80vh;
+        width: 100%;
+        margin-top: 10px;
+        /* Prevent overflow */
+        max-width: 100%;
+        box-sizing: border-box;
     }
 
     .builder-panel {
-        height: 600px;
+        height: 100%;
+        border-radius: 8px;
+    }
+
+    /* Compact Header */
+    .panel-header {
+        padding: 10px;
+    }
+
+    .panel-header h3 {
+        font-size: 1rem;
+        margin-bottom: 5px;
+    }
+
+    .search-input-premium {
+        padding: 6px;
+        font-size: 0.8rem;
+    }
+
+    /* Compact Squad List (Left) */
+    .squad-panel {
+        /* Hide scrollbar visually but allow scroll */
+        scrollbar-width: none;
+    }
+
+    .squad-panel .mini-player-card {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 5px;
+        gap: 2px;
+    }
+
+    .squad-panel .mini-card-left {
+        gap: 4px;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
+
+    .squad-panel .mini-avatar-frame {
+        width: 30px;
+        height: 30px;
+    }
+
+    .squad-panel .mini-name {
+        font-size: 0.8rem;
+        white-space: normal;
+        text-align: center;
+        width: 100%;
+        line-height: 1;
+    }
+
+    .squad-panel .mini-role {
+        display: none;
+    }
+
+    /* Hide role to save space */
+    .squad-panel .mini-card-right {
+        display: none;
+    }
+
+    /* Hide price/drag handle visual (still draggable) */
+    .squad-panel .mini-os-tag {
+        top: 2px;
+        right: 2px;
+        font-size: 0.5rem;
+    }
+
+
+    /* Compact XI Panel (Right) */
+    .xi-panel {
+        background-size: 20px 20px;
+    }
+
+    .xi-status-bar {
+        padding: 10px;
+        flex-direction: column;
+        gap: 5px;
+        align-items: flex-start;
+    }
+
+    .xi-count .val {
+        font-size: 1.5rem;
+    }
+
+    .xi-slots-container {
+        padding: 10px;
+    }
+
+    .xi-slot-filled,
+    .xi-slot-empty {
+        grid-template-columns: 25px 50px 1fr;
+        /* Tighter columns */
+        padding: 4px 6px 4px 0;
+        gap: 6px;
+    }
+
+    .xi-slot-number {
+        width: 25px;
+        height: 25px;
+        font-size: 0.9rem;
+        margin-right: 5px;
+    }
+
+    .xi-player-content .mini-player-card {
+        padding: 2px 0;
+        flex-direction: row;
+        /* Keep row for XI */
+        align-items: center;
+    }
+
+    .xi-player-content .mini-card-left {
+        flex-direction: row;
+        gap: 6px;
+        width: auto;
+    }
+
+    .xi-player-content .mini-name-compact {
+        font-size: 0.9rem;
+    }
+
+    .xi-player-content .mini-avatar-frame {
+        width: 24px;
+        height: 24px;
+    }
+
+    .xi-slot-role {
+        font-size: 0.6rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    /* Impact */
+    .impact-box-container {
+        padding: 10px;
+    }
+
+    .impact-drop-area {
+        min-height: 50px;
+        padding: 5px;
+    }
+
+    .impact-label {
+        font-size: 0.6rem;
+        top: -8px;
+        left: 10px;
+    }
+
+    .impact-placeholder-text {
+        font-size: 0.8rem;
     }
 }

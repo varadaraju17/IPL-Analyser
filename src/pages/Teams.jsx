@@ -47,11 +47,7 @@ const Teams = () => {
             </div>
 
             {activeTab === 'grid' && (
-                <div style={{
-                    display: 'grid',
-                    gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))',
-                    gap: '30px'
-                }}>
+                <div className="teams-grid-container">
                     {teamsData.map((team, index) => (
                         <motion.div
                             key={team.id}

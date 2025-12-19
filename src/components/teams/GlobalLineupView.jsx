@@ -56,9 +56,12 @@ const GlobalLineupView = () => {
                             ) : (
                                 xi.map((player, idx) => (
                                     <div key={player.id} className="tl-player-row">
-                                        <span className="tl-num">{idx + 1}</span>
-                                        <span className="tl-p-name">{player.name}</span>
-                                        <span className="tl-p-role">{player.role.split(' ')[0]}</span>
+                                        <span className="tl-num">{idx < 9 ? `0${idx + 1}` : idx + 1}</span>
+                                        <img src={player.image || '/default_player.png'} alt="" className="tl-p-img" onError={(e) => e.target.src = '/default_player.png'} />
+                                        <div className="tl-p-info">
+                                            <span className="tl-p-name">{player.name}</span>
+                                            <span className="tl-p-role">{player.role.split(' ')[0]}</span>
+                                        </div>
                                     </div>
                                 ))
                             )}
@@ -66,14 +69,14 @@ const GlobalLineupView = () => {
 
                         {/* IMPACT PLAYER */}
                         <div className="tl-impact-area">
-                            <span className="imp-lbl">IMPACT PLAYER <Zap size={10} color="#ff00ff" /></span>
+                            <span className="imp-lbl"><Zap size={12} color="#ff00ff" /> IMPACT PLAYER</span>
                             {impact ? (
                                 <div className="tl-imp-player">
-                                    <img src={impact.image || 'placeholder'} alt={impact.name} className="imp-av" />
-                                    <span>{impact.name}</span>
+                                    <img src={impact.image || '/default_player.png'} alt={impact.name} className="imp-av" onError={(e) => e.target.src = '/default_player.png'} />
+                                    <span className="imp-name">{impact.name}</span>
                                 </div>
                             ) : (
-                                <span className="imp-none">None Selected</span>
+                                <span className="imp-none" style={{ fontSize: '0.8rem', color: '#666', fontStyle: 'italic', marginLeft: 10 }}>None Selected</span>
                             )}
                         </div>
 

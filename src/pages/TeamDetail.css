@@ -205,4 +205,26 @@
         align-items: stretch;
         gap: 16px;
     }
+
+    /* Force 2 Columns for Players */
+    .players-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .view-switcher {
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    .view-btn {
+        padding: 8px 12px;
+        font-size: 0.9rem;
+        flex: 1;
+    }
+
+    .big-team-logo {
+        width: 100px;
+        height: 100px;
+    }
 }
